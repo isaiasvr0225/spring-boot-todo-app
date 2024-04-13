@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'spring-boot-todo-app:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - MYSQL_USER=$DB_USER
+      - MYSQL_PASSWORD=$DB_PASS
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:5432/$DB_NAME
+      - SPRING_DATASOURCE_USERNAME=$YOUR_USERNAME
+      - SPRING_DATASOURCE_PASSWORD=$YOUR_PASSWORD
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+    ports:
+      - "$LOCAL_PORT:$DOCKER_PORT"
+
+  db:
+    image: mysql
+    container_name: db
+    environment:
+      - MYSQL_USER=$YOUR_USERNAME
+      - MYSQL_PASSWORD=$YOUR_PASSWORD
+      - MYSQL_DB=$YOUR_DB_NAME
+    ports:
+      - "$LOCAL_PORT:$DOCKER_PORT"
