@@ -11,7 +11,6 @@ Maven installed on your machine.
 An IDE such as IntelliJ IDEA or Eclipse for development (optional but recommended).
 
 
-
 ## API Reference
 
 
@@ -55,3 +54,28 @@ An IDE such as IntelliJ IDEA or Eclipse for development (optional but recommende
 | Path Param | Return Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `TaskDto` |  Find a task with the specific **id** and delete it.|
+
+Getting Started with Docker
+To get started with the project using Docker, follow these steps:
+
+Clone this repository to your local machine:
+```bash
+  git clone https://github.com/yourusername/todo-spring-boot.git
+```
+
+Navigate to the project directory:
+```bash
+  cd todo-spring-boot
+```
+
+Build the Docker image:
+```bash
+  docker build -t todo-spring-boot
+```
+
+Run the Docker container:
+```bash
+  docker run -p 8080:8080 todo-spring-boot
+```
+
+The application will start inside a Docker container and will be accessible at http://localhost:8080.
