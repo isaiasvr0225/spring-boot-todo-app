@@ -3,7 +3,7 @@
 
 This is a simple Todo application built using Spring Boot. It allows users to create, update, delete, and view todo tasks. The project is structured to follow best practices in Spring Boot development.
 
-Prerequisites
+## Prerequisites
 Before you begin, ensure you have met the following requirements:
 
 Java Development Kit (JDK) 17 or later installed on your machine.
@@ -55,27 +55,27 @@ An IDE such as IntelliJ IDEA or Eclipse for development (optional but recommende
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `TaskDto` |  Find a task with the specific **id** and delete it.|
 
-Getting Started with Docker
+## Getting Started with Docker
 To get started with the project using Docker, follow these steps:
 
 Clone this repository to your local machine:
 ```bash
-  git clone https://github.com/yourusername/todo-spring-boot.git
+  https://github.com/isaiasvr0225/spring-boot-todo-app
 ```
 
 Navigate to the project directory:
 ```bash
-  cd todo-spring-boot
+  cd spring-boot-todo-app
 ```
 
 Build the Docker image:
 ```bash
-  docker build -t todo-spring-boot
+  docker build -t spring-boot-todo-app
 ```
 
 Run the Docker container:
 ```bash
-  docker run -p 8080:8080 todo-spring-boot
+  docker run -p 8080:8080 spring-boot-todo-app
 ```
 
 The application will start inside a Docker container and will be accessible at http://localhost:8080.
